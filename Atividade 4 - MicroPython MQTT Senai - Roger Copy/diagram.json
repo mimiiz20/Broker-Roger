@@ -1,0 +1,82 @@
+{
+  "version": 1,
+  "author": "Uri Shaked",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": -37.58, "left": -96.37, "attrs": {} },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht1",
+      "top": -32.2,
+      "left": 40.16,
+      "attrs": { "temperature": "80", "humidity": "13.5" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": 35,
+      "left": -230.4,
+      "attrs": { "color": "red", "xray": "1" }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "text1",
+      "top": 0,
+      "left": -240,
+      "attrs": { "text": "Atividade 2" }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "text2",
+      "top": -67.2,
+      "left": 19.2,
+      "attrs": { "text": "Atividade 1" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": 124,
+      "left": -257.8,
+      "rotate": 270,
+      "attrs": { "color": "green" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 147.95,
+      "left": -201.6,
+      "attrs": { "value": "330" }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "text3",
+      "top": 163.2,
+      "left": -249.6,
+      "attrs": { "text": "Atividade 3" }
+    },
+    { "type": "wokwi-servo", "id": "servo1", "top": 170.8, "left": 67.2, "attrs": {} },
+    {
+      "type": "wokwi-text",
+      "id": "text4",
+      "top": 259.2,
+      "left": 134.4,
+      "attrs": { "text": "Atividade 4" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "dht1:VCC", "esp:3V3", "red", [ "v109.3", "h-170.36", "v-200.78" ] ],
+    [ "dht1:SDA", "esp:15", "green", [ "v0" ] ],
+    [ "dht1:GND", "esp:GND.1", "black", [ "v99.7", "h-189.56", "v-66.38" ] ],
+    [ "esp:3V3", "btn1:1.l", "red", [ "h-157.84", "v8.78" ] ],
+    [ "btn1:2.r", "esp:32", "green", [ "h29", "v0.2" ] ],
+    [ "r1:1", "led1:C", "green", [ "v0" ] ],
+    [ "r1:2", "esp:GND.1", "black", [ "v0" ] ],
+    [ "esp:27", "led1:A", "orange", [ "h0" ] ],
+    [ "esp:16", "servo1:PWM", "violet", [ "h14.81", "v133.58" ] ],
+    [ "esp:5V", "servo1:V+", "red", [ "h-4.24", "v47.18" ] ],
+    [ "servo1:GND", "esp:GND.1", "black", [ "h-172.8", "v-105.6" ] ]
+  ],
+  "dependencies": {}
+}
