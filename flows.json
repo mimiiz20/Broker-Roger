@@ -1,0 +1,753 @@
+[
+    {
+        "id": "c0d2a3e72c5f95aa",
+        "type": "tab",
+        "label": "Fluxo 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "0a5a0401c337f77b",
+        "type": "inject",
+        "z": "c0d2a3e72c5f95aa",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "mica_lamp",
+        "payload": "on",
+        "payloadType": "str",
+        "x": 150,
+        "y": 100,
+        "wires": [
+            [
+                "587d580aac1a7399"
+            ]
+        ]
+    },
+    {
+        "id": "874ca93e20d0c71c",
+        "type": "inject",
+        "z": "c0d2a3e72c5f95aa",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "mica_lamp",
+        "payload": "off",
+        "payloadType": "str",
+        "x": 150,
+        "y": 180,
+        "wires": [
+            [
+                "587d580aac1a7399"
+            ]
+        ]
+    },
+    {
+        "id": "e8347f4836bf9cd0",
+        "type": "inject",
+        "z": "c0d2a3e72c5f95aa",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "mica_lamp",
+        "payload": "servo90",
+        "payloadType": "str",
+        "x": 170,
+        "y": 260,
+        "wires": [
+            [
+                "587d580aac1a7399"
+            ]
+        ]
+    },
+    {
+        "id": "8ea69e1d016efdbc",
+        "type": "inject",
+        "z": "c0d2a3e72c5f95aa",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "mica_lamp",
+        "payload": "servo0",
+        "payloadType": "str",
+        "x": 170,
+        "y": 340,
+        "wires": [
+            [
+                "587d580aac1a7399"
+            ]
+        ]
+    },
+    {
+        "id": "587d580aac1a7399",
+        "type": "mqtt out",
+        "z": "c0d2a3e72c5f95aa",
+        "name": "Mqtt",
+        "topic": "mica_lamp",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "c6b1163a0be373f7",
+        "x": 450,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "c8e83a0d291c552d",
+        "type": "ui-button",
+        "z": "c0d2a3e72c5f95aa",
+        "group": "04fe07fa395bdec6",
+        "name": "Liga LED",
+        "label": "BOTÃO PARA ACIONAR O LED",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "on",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 120,
+        "y": 440,
+        "wires": [
+            [
+                "587d580aac1a7399"
+            ]
+        ]
+    },
+    {
+        "id": "4c7f4c6c25e19d0c",
+        "type": "ui-button",
+        "z": "c0d2a3e72c5f95aa",
+        "group": "04fe07fa395bdec6",
+        "name": "Desliga LED",
+        "label": "BOTÃO PARA DESLIGAR O LED",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "on",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 130,
+        "y": 520,
+        "wires": [
+            [
+                "587d580aac1a7399"
+            ]
+        ]
+    },
+    {
+        "id": "379eb25b6dd72932",
+        "type": "ui-button",
+        "z": "c0d2a3e72c5f95aa",
+        "group": "04fe07fa395bdec6",
+        "name": "GIRA MOTOR 90 GRAUS",
+        "label": "GIRA O MOTOR A 90°",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "on",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 170,
+        "y": 600,
+        "wires": [
+            [
+                "587d580aac1a7399"
+            ]
+        ]
+    },
+    {
+        "id": "48cf5699b3a47b4c",
+        "type": "ui-button",
+        "z": "c0d2a3e72c5f95aa",
+        "group": "04fe07fa395bdec6",
+        "name": "GIRA O MOTOR 0 GRAUS",
+        "label": "GIRA O MOTOR A 0°",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "on",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 180,
+        "y": 680,
+        "wires": [
+            [
+                "587d580aac1a7399"
+            ]
+        ]
+    },
+    {
+        "id": "d885ccd9f8a08e2c",
+        "type": "ui-slider",
+        "z": "c0d2a3e72c5f95aa",
+        "group": "04fe07fa395bdec6",
+        "name": "",
+        "label": "Ângulo do Servo",
+        "tooltip": "",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "thumbLabel": "true",
+        "showTicks": "always",
+        "min": 0,
+        "max": 10,
+        "step": 1,
+        "className": "",
+        "iconPrepend": "",
+        "iconAppend": "",
+        "color": "",
+        "colorTrack": "",
+        "colorThumb": "",
+        "showTextField": false,
+        "x": 290,
+        "y": 740,
+        "wires": [
+            [
+                "b75b05009ddd1ef9"
+            ]
+        ]
+    },
+    {
+        "id": "b75b05009ddd1ef9",
+        "type": "function",
+        "z": "c0d2a3e72c5f95aa",
+        "name": "function 1",
+        "func": "msg.payload = msg.payload.toString()\nmsg.payload = \"servo\" + msg.payload\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 740,
+        "wires": [
+            [
+                "587d580aac1a7399"
+            ]
+        ]
+    },
+    {
+        "id": "e407b3fd65ca0827",
+        "type": "mqtt in",
+        "z": "c0d2a3e72c5f95aa",
+        "name": "",
+        "topic": "mica_lamp/umidade",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "c6b1163a0be373f7",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 290,
+        "y": 800,
+        "wires": [
+            [
+                "7f0d5ad41e24c32b",
+                "d03c3e8adc66d23e"
+            ]
+        ]
+    },
+    {
+        "id": "7f0d5ad41e24c32b",
+        "type": "ui-text",
+        "z": "c0d2a3e72c5f95aa",
+        "group": "0fbba7d0f1c4a41d",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Umidade",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 480,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "d03c3e8adc66d23e",
+        "type": "function",
+        "z": "c0d2a3e72c5f95aa",
+        "name": "function 2",
+        "func": "msg.payload = Number(msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 860,
+        "wires": [
+            [
+                "becd9e553dcdbb95"
+            ]
+        ]
+    },
+    {
+        "id": "966b6db9d603e6a7",
+        "type": "function",
+        "z": "c0d2a3e72c5f95aa",
+        "name": "function 3",
+        "func": "msg.payload = Number(msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 920,
+        "wires": [
+            [
+                "7a4174a485d10c31"
+            ]
+        ]
+    },
+    {
+        "id": "becd9e553dcdbb95",
+        "type": "ui-chart",
+        "z": "c0d2a3e72c5f95aa",
+        "group": "0fbba7d0f1c4a41d",
+        "name": "Umidade",
+        "label": "Umidade",
+        "order": 3,
+        "chartType": "line",
+        "category": "topic",
+        "categoryType": "msg",
+        "xAxisLabel": "",
+        "xAxisProperty": "",
+        "xAxisPropertyType": "timestamp",
+        "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "",
+        "yAxisProperty": "payload",
+        "yAxisPropertyType": "msg",
+        "ymin": "-20",
+        "ymax": "90",
+        "bins": 10,
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "circle",
+        "pointRadius": 4,
+        "showLegend": true,
+        "removeOlder": 1,
+        "removeOlderUnit": "60",
+        "removeOlderPoints": "",
+        "colors": [
+            "#0095ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 6,
+        "height": 8,
+        "className": "",
+        "interpolation": "linear",
+        "x": 580,
+        "y": 860,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7a4174a485d10c31",
+        "type": "ui-chart",
+        "z": "c0d2a3e72c5f95aa",
+        "group": "0fbba7d0f1c4a41d",
+        "name": "Temperatura",
+        "label": "Temperatura",
+        "order": 4,
+        "chartType": "line",
+        "category": "topic",
+        "categoryType": "msg",
+        "xAxisLabel": "",
+        "xAxisProperty": "",
+        "xAxisPropertyType": "timestamp",
+        "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "",
+        "yAxisProperty": "payload",
+        "yAxisPropertyType": "msg",
+        "ymin": "0",
+        "ymax": "90",
+        "bins": 10,
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "circle",
+        "pointRadius": 4,
+        "showLegend": true,
+        "removeOlder": 1,
+        "removeOlderUnit": "60",
+        "removeOlderPoints": "",
+        "colors": [
+            "#0095ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 6,
+        "height": 8,
+        "className": "",
+        "interpolation": "linear",
+        "x": 590,
+        "y": 920,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "81231654f297acb3",
+        "type": "mqtt in",
+        "z": "c0d2a3e72c5f95aa",
+        "name": "",
+        "topic": "mica_lamp/temperatura",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "c6b1163a0be373f7",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 300,
+        "y": 980,
+        "wires": [
+            [
+                "81e58225c3aa0533",
+                "966b6db9d603e6a7"
+            ]
+        ]
+    },
+    {
+        "id": "81e58225c3aa0533",
+        "type": "ui-text",
+        "z": "c0d2a3e72c5f95aa",
+        "group": "0fbba7d0f1c4a41d",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Temperatura",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 490,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "c6b1163a0be373f7",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "broker.mqttdashboard.com",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "04fe07fa395bdec6",
+        "type": "ui-group",
+        "name": "Controle do ESP 32",
+        "page": "9176fc53e76015cb",
+        "width": 6,
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "0fbba7d0f1c4a41d",
+        "type": "ui-group",
+        "name": "Gráficos",
+        "page": "9176fc53e76015cb",
+        "width": 6,
+        "height": 1,
+        "order": 2,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "9176fc53e76015cb",
+        "type": "ui-page",
+        "name": "Page 1",
+        "ui": "76114c50f6604dcd",
+        "path": "/page1",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "3631f481bc0d9383",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": 0,
+                "cols": 3
+            },
+            {
+                "name": "Tablet",
+                "px": 576,
+                "cols": 6
+            },
+            {
+                "name": "Small Desktop",
+                "px": 768,
+                "cols": 9
+            },
+            {
+                "name": "Desktop",
+                "px": 1024,
+                "cols": 12
+            }
+        ],
+        "order": 1,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "76114c50f6604dcd",
+        "type": "ui-base",
+        "name": "My Dashboard",
+        "path": "/dashboard",
+        "appIcon": "",
+        "includeClientData": true,
+        "acceptsClientConfig": [
+            "ui-notification",
+            "ui-control"
+        ],
+        "showPathInSidebar": false,
+        "headerContent": "page",
+        "navigationStyle": "default",
+        "titleBarStyle": "default",
+        "showReconnectNotification": true,
+        "notificationDisplayTime": 1,
+        "showDisconnectNotification": true,
+        "allowInstall": false
+    },
+    {
+        "id": "3631f481bc0d9383",
+        "type": "ui-theme",
+        "name": "Default Theme",
+        "colors": {
+            "surface": "#ffffff",
+            "primary": "#0094CE",
+            "bgPage": "#eeeeee",
+            "groupBg": "#ffffff",
+            "groupOutline": "#cccccc"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "3de8d43e065f08f3",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "@flowfuse/node-red-dashboard": "1.30.2"
+        }
+    }
+]
