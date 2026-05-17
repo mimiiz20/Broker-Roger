@@ -1,0 +1,31 @@
+[
+    {
+        "id": "e8347f4836bf9cd0",
+        "type": "inject",
+        "z": "c0d2a3e72c5f95aa",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "mica_lamp",
+        "payload": "servo90",
+        "payloadType": "str",
+        "x": 170,
+        "y": 260,
+        "wires": [
+            [
+                "587d580aac1a7399"
+            ]
+        ]
+    }
+]
